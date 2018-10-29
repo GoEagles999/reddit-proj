@@ -1,0 +1,18 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service.js",
+  "scripts": {
+    "start": "node service.js",
+    "test-api": "jest service.test.js",
+    "test-multiply": "jest multiply.test.js"
+  },
+  "keywords": [],
+  "author": "richard demeny",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.6.0",
+    "mysql": "^2.16.0"
+  }
+}
