@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api:
+    container_name: reddit_exam_api
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    links: 
+     - "database:mysql-container"
+  database:
+    container_name: reddit_exam_db
+    build:
+      context: .
+      dockerfile: ./docker/database/Dockerfile
+    environment:
+      MYSQL_DATABASE: reddit-exam
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root

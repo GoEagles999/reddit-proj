@@ -1,3 +1,4 @@
+USE reddit-exam;
 CREATE TABLE Customers (
   ID INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   NAME VARCHAR(20) NOT NULL
@@ -10,4 +11,5 @@ CREATE TABLE Customer_Addresses(
   COUNTRY VARCHAR(2) NOT NULL,
   FOREIGN KEY (CUSTOMER_ID) REFERENCES Customers(ID)
 );
-INSERT INTO CUSTOMER
+INSERT INTO Customers (NAME) VALUES ('Ryan'), ('Jon'), ('Imran'), ('Betty');
+INSERT INTO Customer_Addresses (CUSTOMER_ID, STREET_ADDRESS, POSTAL_CODE, COUNTRY) VALUES (1, '999 Night Stalker Road', '12345', 'US'), (2, '123 Big Walk Way', '75023', 'US'), (3, '', '90021', 'US');
